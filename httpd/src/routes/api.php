@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
+
 
 
 
@@ -49,7 +51,7 @@ Route::middleware('api')->prefix('auth')->group(function () {
 
 });
 
-Route::middleware('api')->group(function () {
+/*Route::middleware('api')->group(function () {
     Route::get('products', fn() => [
         [ "id" => 1, "title" => "iPad 4 Mini"           , "price" => 500.01, "inventory" => 2 , "photo" => "cafe.jpg"    ],
         [ "id" => 2, "title" => "H&M T-Shirt White"     , "price" => 10.99 , "inventory" => 10, "photo" => "cebolla.jpg" ],
@@ -60,6 +62,10 @@ Route::middleware('api')->group(function () {
         [ "id" => 7, "title" => "Aharli ACX - Aucker CD", "price" => 19.99 , "inventory" => 5 , "photo" => "patata.jpg"  ],
         [ "id" => 8, "title" => "Zharli ZXX - Xucker CD", "price" => 29.99 , "inventory" => 3 , "photo" => "pina.jpg"    ]
     ]);
+});*/
+
+Route::middleware('api')->group(function () {
+    Route::get('products', [ProductController::class, 'index'])->name('products.index');
 });
 
 // 
