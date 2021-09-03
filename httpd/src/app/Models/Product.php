@@ -10,5 +10,12 @@ class Product extends Model
     use HasFactory;
     
     protected $hidden = [ 'created_at', 'updated_at' ];
+    
+    protected $fillable = [
+        'title',
+        'price',
+        'inventory',
+        'photo',
+    ];
 
 }
