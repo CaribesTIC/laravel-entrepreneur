@@ -15,59 +15,59 @@ class ProductSeeder extends Seeder
     public function run()
     {
         Product::create([
-            "title" => "iPad 4 Mini",
-            "price" => 500.01,
-            "inventory" => 2 ,
-            "photo" => "cafe.jpg"    
+            "title" => "Ensalada de Pollo",
+            "price" => 8.01,
+            "inventory" => 5 ,
+            "photo" => "dish1.jpg"    
         ]);
         
         Product::create([
-            "title" => "H&M T-Shirt White",
+            "title" => "Pechuga de Pollo al Grill con Ensalada Fresca ",
             "price" => 10.99 ,
             "inventory" => 10,
-            "photo" => "cebolla.jpg"
+            "photo" => "dish2.jpg"
         ]);
         
         Product::create([
-            "title" => "Charli XCX - Sucker CD",
+            "title" => "Brochetas de Pollo y Ensalada Fresca",
             "price" => 19.99 ,
             "inventory" => 5 ,
-            "photo" => "patata.jpg"
+            "photo" => "dish3.jpg"
         ]);
         
         Product::create([
-            "title" => "Xharli XXX - Xucker CD",
+            "title" => "Ensalada de Espinaca, Queso Fresco, Tomate y Aceitunas",
             "price" => 29.99 ,
             "inventory" => 3 ,
-            "photo" => "pina.jpg"
+            "photo" => "dish4.jpg"
         ]);
         
         Product::create([
-            "title" => "oPad 4 oini",
-            "price" => 500.01,
+            "title" => "Salmón a la plancha con Ensalada Fresca",
+            "price" => 12.01,
             "inventory" => 2 ,
-            "photo" => "cafe.jpg"
+            "photo" => "dish5.jpg"
         ]);
         
         Product::create([
-            "title" => "R&M R-Shirt White",
-            "price" => 10.99 ,
+            "title" => "Burritos de Pollo",
+            "price" => 8.99 ,
             "inventory" => 10,
-            "photo" => "cebolla.jpg"
+            "photo" => "dish6.jpg"
         ]);
         
         Product::create([
-            "title" => "Aharli ACX - Aucker CD",
-            "price" => 19.99 ,
+            "title" => "Tostadas de Aguacate y Huevo Cocido",
+            "price" => 5.99 ,
             "inventory" => 5 ,
-            "photo" => "patata.jpg"
+            "photo" => "dish7.jpg"
         ]);
         
         Product::create([
-            "title" => "Zharli ZXX - Xucker CD",
-            "price" => 29.99 ,
+            "title" => "Brochetas de Salmón",
+            "price" => 12.99 ,
             "inventory" => 3 ,
-            "photo" => "pina.jpg"
+            "photo" => "dish8.jpg"
         ]);
     }
 }
