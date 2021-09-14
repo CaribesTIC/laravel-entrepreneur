@@ -24,7 +24,7 @@ class ProductModuleTest extends TestCase
             "photo" => "cafe.jpg"    
         ]);
 
-        $response = $this->get('api/products')
+        $response = $this->get('api/auth/products')
             ->assertStatus(200)
             ->assertSee("iPad 4 Mini")
             ->assertSee(500.01)
