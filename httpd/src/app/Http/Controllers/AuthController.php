@@ -16,7 +16,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login','register']]);
+        $this->middleware('auth:sanctum', ['except' => ['login','register']]);
     }
 
     /**
@@ -35,11 +35,13 @@ class AuthController extends Controller
 
 
     
-        if (! $token = auth()->attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
+            return response()->json(auth()->user());
+        }else{
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return $this->respondWithToken($token);
+
     }
 
     /**
