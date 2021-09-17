@@ -20,21 +20,19 @@ use App\Http\Controllers\ProductController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::post('login',    [AuthController::class, 'login']);
+Route::post('register', [RegisterController::class, 'index']);
+Route::post('logout',   [AuthController::class, 'logout']);
+
 Route::middleware('auth:sanctum')->prefix('auth')->group(function () {
 
-    Route::post('logout',   [AuthController::class, 'logout']);
     Route::get('products', [ProductController::class, 'index'])->name('products.index');
 
 });
 
-
-Route::middleware('guest:web')->group(function () {
-    Route::post('login',    [AuthController::class, 'login']);
-    Route::post('register', [RegisterController::class, 'index']);
-
-});
-
-
 Route::fallback(function(){
     abort(403, 'Unauthorized action.');
 });
+
+
